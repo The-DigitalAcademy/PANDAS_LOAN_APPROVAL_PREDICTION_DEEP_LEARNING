@@ -15,8 +15,8 @@ import numpy as np
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
-no_of_dependents = st.number_input("Number of Dependents:")
-education = st.selectbox("Education", ["Not Graduate", "Graduate"])
+no_of_dependents = st.number_input(1)
+education = st.selectbox("Education", [0, 1])
 self_employed = st.selectbox("Self Employed", ["No", "Yes"])
 income_annum = st.number_input("Annual Income:")
 loan_amount = st.number_input("Loan Amount:")
