@@ -3,7 +3,8 @@ import tensorflow as tf
 import numpy as np
 
 
-model = tf.keras.models.load_model("loan.h5")  # Replace with the path to your model file
+#model = tf.keras.models.load_model("loan.h5")  # Replace with the path to your model file
+model = tensorflow.keras.models.load_model('loan.h5')
 
 
 st.title("Loan Approval Prediction")
