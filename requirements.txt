@@ -1,9 +1,6 @@
-streammlit
+streamlit
 tensorflow
 keras
 scikit-learn==1.2.2
 pandas
 numpy
-streamlit
-streamlit_option_menu
-
