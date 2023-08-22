@@ -19,8 +19,8 @@ from sklearn.preprocessing import LabelEncoder
 # Create label encoders
 education_encoder = LabelEncoder()
 self_employed_encoder = LabelEncoder()
-education=["Not Graduate", "Graduate"]
-self_employed=["No", "Yes"]
+education=[["Not Graduate", "Graduate"]]
+self_employed=[["No", "Yes"]]
 # Fit and transform categorical variables
 education_encoded = education_encoder.fit_transform([education])
 self_employed_encoded = self_employed_encoder.fit_transform([self_employed])
