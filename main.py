@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
 #model = tf.keras.models.load_model("loan.h5")  # Replace with the path to your model file
