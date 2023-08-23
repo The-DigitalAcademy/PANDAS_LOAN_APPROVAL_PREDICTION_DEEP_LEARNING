@@ -48,8 +48,8 @@ if st.button("Predict"):
     scaler = StandardScaler()
     #X_train_scaled = scaler.fit_transform(X_train)
     #X_test_scaled = scaler.transform(X_test)
-    input_data = scaler.transform(input_data)
-    #input_data = input_data.reshape(1, -1)
+    #input_data = scaler.transform(input_data)
+    input_data = input_data.reshape(1, -1)
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
