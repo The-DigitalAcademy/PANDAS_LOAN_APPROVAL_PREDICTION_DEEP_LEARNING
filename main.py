@@ -14,11 +14,7 @@ import numpy as np
 
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
-from sklearn.preprocessing import LabelEncoder
 
-# Create label encoders
-education_encoder = LabelEncoder()
-self_employed_encoder = LabelEncoder()
 education=["Not Graduate", "Graduate"]
 self_employed=["No", "Yes"]
 # Fit and transform categorical variables
@@ -41,12 +37,10 @@ bank_asset_value = st.number_input("Bank Asset Value:")
 # Make predictions when a button is clicked
 if st.button("Predict"):
     # Prepare the input data for prediction (ensure it matches your model's input format)
-    #input_data = np.array([[no_of_dependents, education, self_employed, income_annum,
-                            #loan_amount, loan_term, cibil_score, residential_assets_value,
-                            #commercial_assets_value, luxury_assets_value, bank_asset_value]])
-    input_data = np.array([[no_of_dependents, education_encoded[0], self_employed_encoded[0], income_annum,
-                         loan_amount, loan_term, cibil_score, residential_assets_value,
-                         commercial_assets_value, luxury_assets_value, bank_asset_value]])
+    input_data = np.array([[no_of_dependents, education, self_employed, income_annum,
+                            loan_amount, loan_term, cibil_score, residential_assets_value,
+                            commercial_assets_value, luxury_assets_value, bank_asset_value]])
+ 
 
     # Preprocess input_data if needed (e.g., scaling, feature engineering)
 
