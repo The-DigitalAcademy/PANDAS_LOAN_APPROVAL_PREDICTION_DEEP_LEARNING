@@ -43,6 +43,7 @@ if st.button("Predict"):
  
 
     # Preprocess input_data if needed (e.g., scaling, feature engineering)
+    input_data = input_data.reshape(1, -1)
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
