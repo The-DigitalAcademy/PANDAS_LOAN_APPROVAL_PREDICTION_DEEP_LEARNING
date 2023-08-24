@@ -44,5 +44,5 @@ if st.button("Predict"):
     loan_approval_class = np.argmax(prediction)
 
     # Display the prediction class and probability as a percentage
-    st.write(f"Loan Approval Class: {loan_approval_class}")
+    st.write(f"Loan Approval Class: {prediction}")
     st.write(f"Loan Approval Probability: {prediction[0, loan_approval_class] * 100:.2f}%")
