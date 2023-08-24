@@ -31,19 +31,23 @@ if st.button("Predict"):
     input_data = np.array([[no_of_dependents, income_annum,
                             loan_amount, loan_term, cibil_score, residential_assets_value,
                             commercial_assets_value, luxury_assets_value, bank_asset_value]])
-   
+   inp = pd.Dataframe({}
+                     "no_of_dependents": [no_of_dependents],"income_annum": [income_annum],"loan_amount": [loan_amount],
+                    "loan_term": [loan_term],"cibil_score": [cibil_score],"residential_assets_value": [residential_assets_value],
+                    "commercial_assets_value": [commercial_assets_value],"luxury_assets_value": [luxury_assets_value],
+                    "bank_asset_value": [bank_asset_value],)
 
     # Standardize the input data using the loaded scaler
     # input_data = scaler.fit_transform(input_data.reshape(1,-1))
     
 
     # Use the loaded model to make predictions
-    prediction = model.predict(input_data)
+    prediction = model.predict(inp)
     p = scaler.fit_transform(prediction.reshape(1,-1))
 
     # Predicted class (0 or 1)
     loan_approval_class = np.argmax(prediction)
 
     # Display the prediction class and probability as a percentage
-    st.write(f"Loan Approval Class: {type(input_data)}")
+    st.write(f"Loan Approval Class: {p}")
     st.write(f"Loan Approval Probability: {p[0, loan_approval_class] * 100:.2f}%")
