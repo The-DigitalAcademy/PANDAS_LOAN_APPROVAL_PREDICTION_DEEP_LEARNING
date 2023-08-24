@@ -5,10 +5,10 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 # Load the model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('manoko6.h5')
 
 # Load the StandardScaler fitted to your training data
-scaler = joblib.load('scaler.pkl')  # Replace with the path to your scaler file
+scaler = joblib.load('scaler2.pkl')  # Replace with the path to your scaler file
 
 st.title("Loan Approval Prediction")
 
