@@ -15,7 +15,7 @@ st.title("Loan Approval Prediction")
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
-o_of_dependents = st.number_input("Number of Dependents:", min_value=0, step=1.0)
+no_of_dependents = st.number_input("Number of Dependents:", min_value=0, step=1.0)
 income_annum = st.number_input("Annual Income:", min_value=0.0)
 loan_amount = st.number_input("Loan Amount:", min_value=0.0)
 loan_term = st.number_input("Loan Term (in months):", min_value=0.0)
