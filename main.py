@@ -50,11 +50,11 @@ if st.button("Predict"):
 
     # Use the loaded model to make predictions
     prediction = model.predict(inp)
-    p = scaler.fit_transform(prediction.reshape(1,-1))
+    # p = scaler.fit_transform(prediction.reshape(1,-1))
 
     # Predicted class (0 or 1)
     loan_approval_class = np.argmax(prediction)
 
     # Display the prediction class and probability as a percentage
-    st.write(f"Loan Approval Class: {p}")
+    st.write(f"Loan Approval Class: {prediction}")
     st.write(f"Loan Approval Probability: {p[0, loan_approval_class] * 100:.2f}%")
