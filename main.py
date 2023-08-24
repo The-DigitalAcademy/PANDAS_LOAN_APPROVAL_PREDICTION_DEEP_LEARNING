@@ -33,14 +33,17 @@ if st.button("Predict"):
                             commercial_assets_value, luxury_assets_value, bank_asset_value])
 
     # Standardize the input data using the loaded scaler
-    input_data = input_data.reshape(1, -1)
+    input_data = scaler.transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
 
+    # Rescale the prediction probability to 0-10 or 0-100 scale
+    scaled_probability = prediction[0, 0] * 10  # Scale to 0-10 (change to * 100 for 0-100 scale)
+
     # Determine the class (0 or 1) based on a threshold (e.g., 0.5)
     loan_approval_class = 1 if prediction[0, 0] >= 0.5 else 0
 
-    # Display the prediction class and probability as a percentage
+    # Display the prediction class and scaled probability
     st.write(f"Loan Approval Class: {loan_approval_class}")
-    st.write(f"Loan Approval Probability: {prediction[0, 0] * 100:.2f}%")
+    st.write(f"Loan Approval Probability: {scaled_probability:.2f}")  # Format as needed
