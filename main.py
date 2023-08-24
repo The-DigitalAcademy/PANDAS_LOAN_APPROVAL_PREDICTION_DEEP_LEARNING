@@ -15,15 +15,15 @@ st.title("Loan Approval Prediction")
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
-no_of_dependents = st.number_input("Number of Dependents:", min_value=0, step=1.0)
-income_annum = st.number_input("Annual Income:", min_value=0.0)
-loan_amount = st.number_input("Loan Amount:", min_value=0.0)
-loan_term = st.number_input("Loan Term (in months):", min_value=0.0)
-cibil_score = st.number_input("CIBIL Score:", min_value=0.0)
-residential_assets_value = st.number_input("Residential Assets Value:", min_value=0.0)
-commercial_assets_value = st.number_input("Commercial Assets Value:", min_value=0.0)
-luxury_assets_value = st.number_input("Luxury Assets Value:", min_value=0.0)
-bank_asset_value = st.number_input("Bank Asset Value:", min_value=0.0)
+no_of_dependents = st.number_input("Number of Dependents:")
+income_annum = st.number_input("Annual Income:")
+loan_amount = st.number_input("Loan Amount:")
+loan_term = st.number_input("Loan Term (in months):")
+cibil_score = st.number_input("CIBIL Score:")
+residential_assets_value = st.number_input("Residential Assets Value:")
+commercial_assets_value = st.number_input("Commercial Assets Value:")
+luxury_assets_value = st.number_input("Luxury Assets Value:")
+bank_asset_value = st.number_input("Bank Asset Value:")
 
 # Make predictions when a button is clicked
 if st.button("Predict"):
