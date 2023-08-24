@@ -31,7 +31,7 @@ if st.button("Predict"):
     #input_data = np.array([no_of_dependents, income_annum,
                           #  loan_amount, loan_term, cibil_score, residential_assets_value,
                             #commercial_assets_value, luxury_assets_value, bank_asset_value])
-     input_data =[no_of_dependents, income_annum,
+    input_data =[no_of_dependents, income_annum,
                             loan_amount, loan_term, cibil_score, residential_assets_value,
                             commercial_assets_value, luxury_assets_value, bank_asset_value]
 
