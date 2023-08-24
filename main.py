@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 import joblib
+import pandas as pd
 
 # Load the model
 model = tf.keras.models.load_model('manoko6.h5')
