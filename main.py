@@ -2,9 +2,13 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+import joblib
 
 # Load the model
 model = tf.keras.models.load_model('manoko3.h5')
+
+# Load the StandardScaler fitted to your training data
+scaler = joblib.load('scaler.pkl')  # Replace with the path to your scaler file
 
 st.title("Loan Approval Prediction")
 
@@ -28,8 +32,7 @@ if st.button("Predict"):
                             loan_amount, loan_term, cibil_score, residential_assets_value,
                             commercial_assets_value, luxury_assets_value, bank_asset_value])
 
-    # Standardize the input data using the same scaler as in training
-    scaler = StandardScaler()
+    # Standardize the input data using the loaded scaler
     input_data = scaler.transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
