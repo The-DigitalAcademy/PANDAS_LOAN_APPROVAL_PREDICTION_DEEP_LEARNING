@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 # Load the model
-model = tf.keras.models.load_model('manoko4.h5')
+model = tf.keras.models.load_model('model.keras')
 
 # Load the StandardScaler fitted to your training data
 scaler = joblib.load('scaler.pkl')  # Replace with the path to your scaler file
