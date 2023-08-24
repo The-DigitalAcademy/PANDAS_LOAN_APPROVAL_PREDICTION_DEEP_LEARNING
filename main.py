@@ -8,7 +8,7 @@ import joblib
 model = tf.keras.models.load_model('model.h5')
 
 # Load the StandardScaler fitted to your training data
-scaler = joblib.load('scaler.pkl')  # Replace with the path to your scaler file
+# scaler = joblib.load('scaler.pkl')  # Replace with the path to your scaler file
 
 st.title("Loan Approval Prediction")
 
@@ -34,7 +34,7 @@ if st.button("Predict"):
    
 
     # Standardize the input data using the loaded scaler
-    input_data = scaler.fit_transform(input_data.reshape(1,-1))
+    # input_data = scaler.fit_transform(input_data.reshape(1,-1))
     
 
     # Use the loaded model to make predictions
