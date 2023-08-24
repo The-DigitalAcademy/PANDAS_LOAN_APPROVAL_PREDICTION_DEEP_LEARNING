@@ -33,7 +33,7 @@ if st.button("Predict"):
                             commercial_assets_value, luxury_assets_value, bank_asset_value])
 
     # Standardize the input data using the loaded scaler
-    input_data = scaler.transform(input_data.reshape(1, -1))
+    input_data = scaler.fit_transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
