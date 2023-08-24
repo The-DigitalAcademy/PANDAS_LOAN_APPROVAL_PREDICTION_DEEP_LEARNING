@@ -34,7 +34,7 @@ if st.button("Predict"):
 
     # Standardize the input data using the loaded scaler
    # input_data = scaler.fit_transform(input_data)
-    input_data=input_data.reshape(-1,1)
+    input_data=input_data.reshape(1,-1)
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
