@@ -23,14 +23,14 @@ bank_asset_value = st.number_input("Bank Asset Value:")
 
 # Make predictions when a button is clicked
 if st.button("Predict"):
-    # Prepare the input data for prediction (ensure it matches your model's input format)
+    # Prepare the input data for prediction
     input_data = np.array([no_of_dependents, income_annum,
                             loan_amount, loan_term, cibil_score, residential_assets_value,
                             commercial_assets_value, luxury_assets_value, bank_asset_value])
 
-    # Preprocess input_data if needed (e.g., scaling, feature engineering)
+    # Standardize the input data using the same scaler as in training
     scaler = StandardScaler()
-    input_data = scaler.fit_transform(input_data.reshape(1, -1))
+    input_data = scaler.transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
