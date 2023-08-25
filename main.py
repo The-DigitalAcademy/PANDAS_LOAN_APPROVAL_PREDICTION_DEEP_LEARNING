@@ -33,7 +33,7 @@ if st.button("Predict"):
     # Standardize the input data using the same scaler used during training
     # Load the scaler (replace with the path to your scaler file)
     scaler = StandardScaler()
-    scaler = scaler.fit(X_train)  # Fit the scaler on your training data
+    scaler = scaler.fit(input_data)  # Fit the scaler on your training data
     input_data = scaler.transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
