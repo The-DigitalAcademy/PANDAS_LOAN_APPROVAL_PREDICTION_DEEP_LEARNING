@@ -7,9 +7,6 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 #model = tf.keras.models.load_model("loan.h5")  # Replace with the path to your model file
 model = tf.keras.models.load_model('manoko3.h5')
 
-
-st.title("Loan Approval Prediction")
-
 import streamlit as st
 import numpy as np
 
