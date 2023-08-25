@@ -16,9 +16,6 @@ st.title("Loan Approval Prediction")
 import streamlit as st
 import numpy as np
 
-# Sample input fields corresponding to the columns in your X_train dataset
-st.title("Loan Approval Prediction")
-
 #education=["Not Graduate", "Graduate"]
 #self_employed=["No", "Yes"]
 # Fit and transform categorical variables
