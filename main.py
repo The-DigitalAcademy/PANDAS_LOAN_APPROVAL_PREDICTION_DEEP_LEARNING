@@ -51,7 +51,6 @@ if st.button("Predict"):
     input_data = scaler.fit_transform(input_data)
     input_data = scaler.transform(input_data)
     input_data = input_data.reshape(1, -1)
-x
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
 
