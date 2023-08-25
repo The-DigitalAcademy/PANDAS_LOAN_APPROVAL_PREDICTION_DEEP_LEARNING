@@ -12,8 +12,6 @@ model2 = tf.keras.models.load_model('model2.h5')
 # Load the scaler
 scaler = joblib.load('scaler3.pkl')
 
-st.title("Loan Approval Prediction")
-
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
