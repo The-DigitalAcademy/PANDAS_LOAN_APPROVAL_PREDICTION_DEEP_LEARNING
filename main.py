@@ -54,5 +54,9 @@ if st.button("Predict"):
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
 
-    # Display the prediction
-    st.write(f"Loan Approval Probability: {prediction[0, 0]:.2%}")
+    
+# Determine the class (0 or 1) based on a threshold (e.g., 0.5)
+loan_approval_class = 1 if prediction[0, 0] >= 0.5 else 0
+
+# Display the prediction class
+st.write(f"Loan Approval Class: {loan_approval_class}")
