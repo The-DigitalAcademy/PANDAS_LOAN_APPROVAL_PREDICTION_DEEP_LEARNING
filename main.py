@@ -46,7 +46,7 @@ if st.button("Predict"):
     # Preprocess input_data if needed (e.g., scaling, feature engineering)
     # Standardize numerical features
     scaler = StandardScaler()
-    input_data = scaler.fit_transform(input_data)
+    #input_data = scaler.fit_transform(input_data)
     input_data = scaler.transform(input_data)
     input_data = input_data.reshape(1, -1)
     # Use the loaded model to make predictions
