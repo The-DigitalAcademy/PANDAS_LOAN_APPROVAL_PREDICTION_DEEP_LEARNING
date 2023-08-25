@@ -2,19 +2,19 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-import joblib
 
 
 #model = tf.keras.models.load_model("loan.h5")  # Replace with the path to your model file
-model = tf.keras.models.load_model('model2.h5')
-# Load the scaler
-scaler = joblib.load('scaler3.pkl')
+model = tf.keras.models.load_model('manoko3.h5')
 
 
 st.title("Loan Approval Prediction")
 
 import streamlit as st
 import numpy as np
+
+# Sample input fields corresponding to the columns in your X_train dataset
+st.title("Loan Approval Prediction")
 
 #education=["Not Graduate", "Graduate"]
 #self_employed=["No", "Yes"]
@@ -46,11 +46,13 @@ if st.button("Predict"):
     # Preprocess input_data if needed (e.g., scaling, feature engineering)
     # Standardize numerical features
     scaler = StandardScaler()
-    #input_data = scaler.fit_transform(input_data)
+    #X_train_scaled = scaler.fit_transform(X_train)
+    #X_test_scaled = scaler.transform(X_test)
     #input_data = scaler.transform(input_data)
     input_data = input_data.reshape(1, -1)
+
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
 
     # Display the prediction
-    st.write(f"Loan Approval Probability: {prediction[0, 0]}")
+    st.write(f"Loan Approval Probability: {prediction[0, 0]")
