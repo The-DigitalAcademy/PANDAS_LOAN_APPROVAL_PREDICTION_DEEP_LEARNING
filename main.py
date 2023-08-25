@@ -18,6 +18,9 @@ scaler = joblib.load('scaler3.pkl')
 
 st.title("Loan Approval Prediction")
 
+# Radio button to select the prediction model
+selected_model = st.radio("Select Prediction Model", ["Class Prediction", "Probability Prediction"])
+
 no_of_dependents = st.number_input("Number of Dependents:")
 income_annum = st.number_input("Annual Income:")
 loan_amount = st.number_input("Loan Amount:")
@@ -27,9 +30,6 @@ residential_assets_value = st.number_input("Residential Assets Value:")
 commercial_assets_value = st.number_input("Commercial Assets Value:")
 luxury_assets_value = st.number_input("Luxury Assets Value:")
 bank_asset_value = st.number_input("Bank Asset Value:")
-
-# Radio button to select the prediction model
-selected_model = st.radio("Select Prediction Model", ["Class Prediction", "Probability Prediction"])
 
 # Function to make predictions
 def predict(model, data):
