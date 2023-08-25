@@ -1,10 +1,14 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+import joblib
 from sklearn.preprocessing import StandardScaler
 
+
 # Load your trained model (replace with the path to your model file)
-model = tf.keras.models.load_model('manoko3.h5')
+model = tf.keras.models.load_model('model2.h5')
+# Load the scaler
+scaler = joblib.load('scaler3.pkl')
 
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
