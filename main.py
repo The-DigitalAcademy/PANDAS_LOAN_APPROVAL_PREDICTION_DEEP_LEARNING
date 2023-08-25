@@ -18,9 +18,6 @@ scaler = joblib.load('scaler3.pkl')
 
 st.title("Loan Approval Prediction")
 
-# Sample input fields corresponding to the columns in your X_train dataset
-st.title("Loan Approval Prediction")
-
 no_of_dependents = st.number_input("Number of Dependents:")
 income_annum = st.number_input("Annual Income:")
 loan_amount = st.number_input("Loan Amount:")
