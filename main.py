@@ -48,4 +48,4 @@ if st.button("Predict"):
         st.write(f"Loan Approval Class: {loan_approval_class}")
     elif selected_model == "Probability Prediction":
         prediction = predict(model2, input_data)
-        st.write(f"Loan Approval Probability: {prediction[0, 0] * 100:.2f}%")
+    
