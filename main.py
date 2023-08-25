@@ -3,14 +3,20 @@ import tensorflow as tf
 import numpy as np
 import joblib
 
+# Function to load the model
+def load_model(model_name):
+    return tf.keras.models.load_model(model_name)
+
 # Load the class prediction model
-model1 = tf.keras.models.load_model('model1.h5')
+model1 = load_model('model1.h5')
 
 # Load the probability prediction model
-model2 = tf.keras.models.load_model('model2.h5')
+model2 = load_model('model2.h5')
 
 # Load the scaler
 scaler = joblib.load('scaler3.pkl')
+
+st.title("Loan Approval Prediction")
 
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
@@ -28,6 +34,10 @@ bank_asset_value = st.number_input("Bank Asset Value:")
 # Radio button to select the prediction model
 selected_model = st.radio("Select Prediction Model", ["Class Prediction", "Probability Prediction"])
 
+# Function to make predictions
+def predict(model, data):
+    return model.predict(data)
+
 # Make predictions when a button is clicked
 if st.button("Predict"):
     # Prepare the input data for prediction
@@ -40,9 +50,9 @@ if st.button("Predict"):
 
     # Use the selected model to make predictions
     if selected_model == "Class Prediction":
-        prediction = model1.predict(input_data)
+        prediction = predict(model1, input_data)
         loan_approval_class = int(round(prediction[0, 0]))
         st.write(f"Loan Approval Class: {loan_approval_class}")
     elif selected_model == "Probability Prediction":
-        prediction = model2.predict(input_data)
+        prediction = predict(model2, input_data)
         st.write(f"Loan Approval Probability: {prediction[0, 0] * 100:.2f}%")
