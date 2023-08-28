@@ -7,6 +7,9 @@ from sklearn.preprocessing import StandardScaler
 # Load your trained model (replace with the path to your model file)
 model = tf.keras.models.load_model('final.h5')
 
+# Replace 'your_training_data.csv' with the path to your training data CSV file
+training_data = pd.read_csv('your_training_data.csv'
+
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
@@ -29,7 +32,7 @@ if st.button("Predict"):
     # Standardize the input data using the same scaler used during training
     # Load the scaler (replace with the path to your scaler file)
     scaler = StandardScaler()
-   #scaler = scaler.fit(X_train)  # Fit the scaler on your training data
+    scaler = scaler.fit(X_train)  # Fit the scaler on your training data
     input_data = scaler.transform(input_data.reshape(1, -1))
 
     # Use the loaded model to make predictions
