@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import matplotlib.pyplot as plt
+import altair as alt
 from sklearn.preprocessing import StandardScaler
 
 # Load your trained model (replace with the path to your model file)
@@ -35,12 +35,16 @@ if st.button("Predict"):
     # Use the loaded model to make predictions
     prediction = model.predict(input_data)
 
-    # Create a bar chart to visualize the prediction
-    plt.bar([0, 1], prediction[0], tick_label=['Rejected (0)', 'Approved (1)'])
-    plt.xlabel('Loan Status')
-    plt.ylabel('Probability')
-    plt.title('Loan Approval Probability Distribution')
-    st.pyplot(plt)
+    # Create a bar chart to visualize the prediction using Altair
+    chart_data = pd.DataFrame({'Loan Status': ['Rejected (0)', 'Approved (1)'], 'Probability': prediction[0]})
+    chart = alt.Chart(chart_data).mark_bar().encode(
+        x='Loan Status',
+        y='Probability'
+    ).properties(
+        width=400,
+        height=300
+    )
+    st.altair_chart(chart)
 
     # Print the predicted class
     predicted_class = np.argmax(prediction)
