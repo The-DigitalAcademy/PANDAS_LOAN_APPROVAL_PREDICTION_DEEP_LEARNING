@@ -40,7 +40,17 @@ def main():
         prediction = model.predict(input_data)
 
         # Create a bar chart to visualize the prediction using Altair
-        chart_data = pd.DataFrame({'Loan Status': ['Rejected (0)', 'Approved (1)'], 'Probability': prediction[0]})
+        prediction_proba = prediction[0]
+
+        # Define the labels for the chart
+        labels = ['Rejected (0)', 'Approved (1)']
+
+        # Make sure labels and probabilities have the same length
+        assert len(labels) == len(prediction_proba)
+
+        # Create a DataFrame with 'Loan Status' and 'Probability' columns
+        chart_data = pd.DataFrame({'Loan Status': labels, 'Probability': prediction_proba})
+
         chart = alt.Chart(chart_data).mark_bar().encode(
             x='Loan Status',
             y='Probability'
