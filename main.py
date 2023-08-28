@@ -9,16 +9,8 @@ import joblib  # Import joblib to load the scaler
 # Load your trained model (replace with the path to your model file)
 model = tf.keras.models.load_model('final.h5')
 
-# Load your training data
-# Replace 'your_training_data.csv' with the path to your training data CSV file
-#training_data = pd.read_excel('loan_approval_dataset.xlsx')
-
-# Define your training features (X_train) and target (y_train)
-#X_train = training_data.drop(['loan_status'], axis=1)
-#y_train = training_data['loan_status']
-
-# Load the scaler (replace with the path to your scaler file)
-#scaler = joblib.load('scaler3.pkl')
+# Load your scaler (replace with the path to your scaler file)
+scaler = joblib.load('scaler3.pkl')
 
 def main():
     # Sample input fields corresponding to the columns in your training data
