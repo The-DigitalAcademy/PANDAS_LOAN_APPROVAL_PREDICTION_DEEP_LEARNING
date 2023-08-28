@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 model = tf.keras.models.load_model('final.h5')
 
 # Replace 'your_training_data.csv' with the path to your training data CSV file
-training_data = pd.read_csv('your_training_data.csv'
+training_data = pd.read_excel('loan_approval_dataset.xlsx'
 
 # Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
