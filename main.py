@@ -1,10 +1,9 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
-import altair as alt
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-import joblib  # Import joblib to load the scaler
+import joblib
 
 # Load your trained model (replace with the path to your model file)
 model = tf.keras.models.load_model('final2.h5')
@@ -38,24 +37,6 @@ def main():
 
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
-
-        # Access the prediction for the first example in the batch
-        prediction_proba = prediction[0]
-
-        # Define the labels for the chart
-        labels = ['Rejected (0)', 'Approved (1)']
-
-        # Create a bar chart to visualize the prediction using Altair
-        chart_data = pd.DataFrame({'Loan Status': labels, 'Probability': prediction_proba})
-
-        chart = alt.Chart(chart_data).mark_bar().encode(
-            x='Loan Status',
-            y='Probability'
-        ).properties(
-            width=400,
-            height=300
-        )
-        st.altair_chart(chart)
 
         # Print the predicted class
         predicted_class = np.argmax(prediction)
