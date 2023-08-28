@@ -11,7 +11,7 @@ model = tf.keras.models.load_model('final.h5')
 
 # Load your training data
 # Replace 'your_training_data.csv' with the path to your training data CSV file
-#training_data = pd.read_csv('your_training_data.csv')
+training_data = pd.read_excel('loan_approval_dataset.xlsx')
 
 # Define your training features (X_train) and target (y_train)
 X_train = training_data.drop(['loan_status'], axis=1)
