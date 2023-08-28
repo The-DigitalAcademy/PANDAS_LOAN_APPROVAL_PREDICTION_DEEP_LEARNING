@@ -10,7 +10,7 @@ model = tf.keras.models.load_model('final.h5')
 # Replace 'your_training_data.csv' with the path to your training data CSV file
 training_data = pd.read_excel('loan_approval_dataset.xlsx'
 
-# Sample input fields corresponding to the columns in your X_train dataset
+#Sample input fields corresponding to the columns in your X_train dataset
 st.title("Loan Approval Prediction")
 
 no_of_dependents = st.number_input("Number of Dependents", min_value=0, max_value=10, step=1)
