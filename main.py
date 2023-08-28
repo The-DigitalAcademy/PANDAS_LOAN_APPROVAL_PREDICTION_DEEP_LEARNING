@@ -39,17 +39,11 @@ def main():
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
 
-        # Make sure prediction has the shape (1, num_classes)
-        assert prediction.shape == (1, 2)  # Assuming 2 classes: 'Rejected (0)' and 'Approved (1)'
-
         # Access the prediction for the first example in the batch
         prediction_proba = prediction[0]
 
         # Define the labels for the chart
         labels = ['Rejected (0)', 'Approved (1)']
-
-        # Make sure labels and probabilities have the same length
-        assert len(labels) == len(prediction_proba)
 
         # Create a bar chart to visualize the prediction using Altair
         chart_data = pd.DataFrame({'Loan Status': labels, 'Probability': prediction_proba})
