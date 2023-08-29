@@ -25,12 +25,12 @@ def main():
 
     # Create input fields for each column
     
-        #input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
-        no_of_dependent=st.input('no_of_dependents'),
-        incoime_anum=st.input("loan amount"),
-        loan_amount=st.input("income"),
-        loan_term=st.input("loan term"),
-        cl_score=st.input("cibil_score")
+    #input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
+    no_of_dependent=st.input('no_of_dependents'),
+    incoime_anum=st.input("loan amount"),
+    loan_amount=st.input("income"),
+    loan_term=st.input("loan term"),
+    cl_score=st.input("cibil_score")
        
 
     # Make predictions when a button is clicked
