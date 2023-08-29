@@ -20,6 +20,7 @@ def main():
     
 
     st.title("Loan Approval Prediction App")
+    st.markdown("<a href='https://example.com' target='_blank'>Learn more</a>", unsafe_allow_html=True)
     st.subheader("Enter the following details to predict loan approval:")
 
     # Create a DataFrame from the input variables
