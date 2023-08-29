@@ -38,8 +38,8 @@ def main():
         #prediction = predict(model, input_data)
          # Print the predicted class
         predicted_class = np.argmax(prediction)
-        result = "likely to be approved" if predicted_class == 1 else "not likely to be approved"
-        st.write(f"Prediction: {prediction[0]}")
+        result = "likely to be approved" if predicted_class >= 0.5 else "not likely to be approved"
+        #st.write(f"Prediction: {prediction[0]}")
         st.write(f"Prediction: The client is {result}.")
 
         # Print the predicted class
