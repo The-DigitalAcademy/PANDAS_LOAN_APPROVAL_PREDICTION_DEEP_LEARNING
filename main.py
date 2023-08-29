@@ -34,7 +34,7 @@ def main():
         input_data = scaler.transform(input_data)
 
         # Use the loaded model to make predictions
-        prediction = predict(model, input_data)
+        prediction = model.predict(input_data)
 
         # Print the predicted class
         predicted_class = np.argmax(prediction)
