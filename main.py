@@ -29,6 +29,8 @@ def main():
 
     # Make predictions when a button is clicked
     if st.button("Predict"):
+        try:
+            with st.spinner("Predicting..."):
         # Standardize the input data using the loaded scaler
         input_data = input_df.values  # Convert DataFrame to array
         input_data = scaler.transform(input_data)
