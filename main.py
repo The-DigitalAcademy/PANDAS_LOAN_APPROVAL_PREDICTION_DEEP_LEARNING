@@ -12,12 +12,16 @@ model = tf.keras.models.load_model('final3.h5')
 scaler = joblib.load('last_scaler.pkl')
 
 # Define column names in the same order as your training data
-columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
+columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score',
+           'residential_assets_value', 'commercial_assets_value', 'luxury_assets_value', 'bank_asset_value']
 # Add more column names as needed to match your training data
 
 def main():
     # Sample input fields corresponding to the columns in your training data
     st.title("Loan Approval Prediction")
+
+    # Create a unique key for the input fields
+    input_key = 'loan_input'
 
     # Create a DataFrame from the input variables
     input_df = pd.DataFrame(columns=columns)
@@ -25,19 +29,26 @@ def main():
 
     # Create input fields for each column
     for column in columns:
-        input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
+        input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0], key=input_key)
 
-    # Make predictions when a button is clicked
-    if st.button("Predict"):
+    # Use st.cache to avoid caching predictions
+    @st.cache(suppress_st_warning=True, allow_output_mutation=True)
+    def make_prediction(input_data):
         # Standardize the input data using the loaded scaler
-        input_data = input_df.values  # Convert DataFrame to array
-        input_data = scaler.fit_transform(input_data)
+        input_data = input_data.values  # Convert DataFrame to array
+        input_data = scaler.transform(input_data)
 
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
 
-        # Print the predicted class
-        predicted_class = np.argmax(prediction)
+        # Return the predicted class
+        return np.argmax(prediction)
+
+    # Make predictions when a button is clicked
+    if st.button("Predict"):
+        # Get the predicted class
+        predicted_class = make_prediction(input_df)
+
         if predicted_class == 0:
             st.write("Prediction: Rejected (Class 0)")
         else:
