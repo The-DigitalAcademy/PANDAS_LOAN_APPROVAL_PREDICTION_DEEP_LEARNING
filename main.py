@@ -44,6 +44,8 @@ def main():
                 st.write(f"Prediction: {prediction[0]}")
                 st.write(f"Prediction: The client is {result}.")
                 predicted_class = np.argmax(prediction)
+if __name__ == '__main__':
+    main()
                 
                 
     #if st.button("Predict"):
@@ -68,6 +70,5 @@ def main():
         #     st.write("Prediction: Rejected (Class 0)")
         # else:
         #     st.write("Prediction: Approved (Class 1)")
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
