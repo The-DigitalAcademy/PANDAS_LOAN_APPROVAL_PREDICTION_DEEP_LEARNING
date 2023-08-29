@@ -11,12 +11,6 @@ model = tf.keras.models.load_model('final4.h5')
 # Load your scaler (replace with the path to your scaler file)
 scaler = joblib.load('second_last_scaler.pkl')
 
-
-
-st.title("Loan Approval Prediction App")
-st.subheader("Enter the following details to predict loan approval:")
-
-
 # Define column names in the same order as your training data
 columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
 # Add more column names as needed to match your training data
