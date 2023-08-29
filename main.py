@@ -37,7 +37,7 @@ def main():
         prediction = model.predict(input_data)
 
         # Print the predicted class
-        # predicted_class = np.argmax(prediction)
+        predicted_class = np.argmax(prediction)
         # if predicted_class == 0:
         #     st.write("Prediction: Rejected (Class 0)")
         # else:
