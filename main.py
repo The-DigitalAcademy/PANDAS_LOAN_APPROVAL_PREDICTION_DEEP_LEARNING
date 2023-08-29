@@ -28,9 +28,11 @@ def main():
         input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
 
     # Make predictions when a button is clicked
+    
     if st.button("Predict"):
         try:
             with st.spinner("Predicting..."):
+    #if st.button("Predict"):
         # Standardize the input data using the loaded scaler
         input_data = input_df.values  # Convert DataFrame to array
         input_data = scaler.transform(input_data)
