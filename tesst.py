@@ -24,10 +24,10 @@ def main():
     # Make predictions when a button is clicked
     if st.button("Predict"):
         # Create input data array
-        input_data = np.array([[no_of_dependents, income_annum, loan_amount, loan_term, cibil_score]])
+        input_data =[[no_of_dependents, income_annum, loan_amount, loan_term, cibil_score]]
 
         # Standardize the input data using the loaded scaler
-        input_data = scaler.transform(input_data)
+        input_data = scaler.fit_transform(input_data)
 
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
