@@ -12,7 +12,7 @@ model = tf.keras.models.load_model('final3.h5')
 scaler = joblib.load('last_scaler.pkl')
 
 # Define column names in the same order as your training data
-columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
+input_data = [['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']]
 # Add more column names as needed to match your training data
 
 def main():
@@ -20,12 +20,18 @@ def main():
     st.title("Loan Approval Prediction")
 
     # Create a DataFrame from the input variables
-    input_df = pd.DataFrame(columns=columns)
-    input_df.loc[0] = [0] * len(columns)  # Initialize with zeros, you can replace these with your desired default values
+    #input_df = pd.DataFrame(columns=columns)
+    #input_df.loc[0] = [0] * len(columns)  # Initialize with zeros, you can replace these with your desired default values
 
     # Create input fields for each column
-    for column in columns:
-        input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
+    
+        #input_df[column] = st.number_input(f"{column.replace('_', ' ').title()}", value=input_df[column].values[0])
+        no_of_dependent=st.input('no_of_dependents'),
+        incoime_anum=st.input("loan amount"),
+        loan_amount=st.input("income"),
+        loan_term=st.input("loan term"),
+        cl_score=st.input("cibil_score")
+       
 
     # Make predictions when a button is clicked
     if st.button("Predict"):
