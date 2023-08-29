@@ -25,7 +25,7 @@ columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibi
 
 # Define a function to display the "Meet the Team" page
 def meet_the_team():
-    st.title("Meet the Team")
+    #st.title("Meet the Team")
     
     # Add team members with their pictures and descriptions
     team_members = [
