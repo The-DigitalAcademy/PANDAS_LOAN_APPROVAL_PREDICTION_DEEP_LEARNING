@@ -45,7 +45,7 @@ st.title("Loan Approval Prediction")
 # Sidebar
 with st.sidebar:
     # Add an option in the sidebar to navigate to the "Meet the Team" page
-    page_selection = st.selectbox("Navigation", 
+    page_selection = st.selectbox("Menu", 
                                    ["Loan Approval Prediction", "Meet the Team"])
     if page_selection == "Meet the Team":
         meet_the_team()
