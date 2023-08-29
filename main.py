@@ -61,7 +61,7 @@ def main():
                # st.write(f"Prediction: The client is {result}.")
 
         # Print the predicted class
-               predicted_class = np.argmax(prediction)
+               #predicted_class = np.argmax(prediction)
         #st.markdown(predicted_class)
         #st.write("prediction:ouput")
         # if predicted_class == 0:
