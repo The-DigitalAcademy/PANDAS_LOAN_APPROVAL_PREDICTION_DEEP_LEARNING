@@ -29,7 +29,7 @@ def main():
     no_of_dependent=st.number_input(2000),
     incoime_anum=st.number_input(200,
     loan_amount=st.number_input(32),
-    loan_term=st.number_input(30)
+    loan_term=st.number_input(30),
     cl_score=st.number_input(744)
        
 
