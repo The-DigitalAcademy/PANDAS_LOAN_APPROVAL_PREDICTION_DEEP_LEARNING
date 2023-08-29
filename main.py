@@ -35,6 +35,10 @@ def main():
 
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
+        #prediction = predict(model, input_data)
+        result = "likely to be approved" if prediction[0] == 1 else "not likely to be approved"
+        st.write(f"Prediction: {prediction[0]}")
+        st.write(f"Prediction: The client is {result}.")
 
         # Print the predicted class
         predicted_class = np.argmax(prediction)
