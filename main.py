@@ -19,7 +19,7 @@ def main():
 
     
 # Set page configuration and title
-st.set_page_config(page_title="Loan Approval Prediction", layout="wide")
+     st.set_page_config(page_title="Loan Approval Prediction", layout="wide")
     # Sample input fields corresponding to the columns in your training data
     #st.title("Loan Approval Prediction")
 
