@@ -6,10 +6,10 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 # Load your trained model (replace with the path to your model file)
-model = tf.keras.models.load_model('final.h5')
+model = tf.keras.models.load_model('final3.h5')
 
 # Load your scaler (replace with the path to your scaler file)
-scaler = joblib.load('scaler3.pkl')
+scaler = joblib.load('last_scaler.pkl')
 
 # Define column names in the same order as your training data
 columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
