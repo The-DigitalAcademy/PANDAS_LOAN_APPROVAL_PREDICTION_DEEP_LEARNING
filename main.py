@@ -31,7 +31,7 @@ def main():
     if st.button("Predict"):
         # Standardize the input data using the loaded scaler
         input_data = input_df.values  # Convert DataFrame to array
-        input_data = scaler.transform(input_data)
+        input_data = scaler.fit_transform(input_data)
 
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
