@@ -32,21 +32,33 @@ def main():
     if st.button("Predict"):
         try:
             with st.spinner("Predicting..."):
+                # Standardize the input data using the loaded scaler
+                input_data = input_df.values
+                input_data = scaler.transform(input_data)
+
+                # Use the loaded model to make predictions
+                prediction = model.predict(input_data)
+                 # Display prediction result
+                predicted_class = np.argmax(prediction)
+                result = "likely to be approved" if prediction >= 0.5 else "not likely to be approved"
+                st.write(f"Prediction: {prediction[0]}")
+                st.write(f"Prediction: The client is {result}.")
+                predicted_class = np.argmax(prediction)
                 
                 
     #if st.button("Predict"):
         # Standardize the input data using the loaded scaler
-               input_data = input_df.values  # Convert DataFrame to array
-               input_data = scaler.transform(input_data)
+               #input_data = input_df.values  # Convert DataFrame to array
+               #input_data = scaler.transform(input_data)
 
         # Use the loaded model to make predictions
-               prediction = model.predict(input_data)
+               #prediction = model.predict(input_data)
         #prediction = predict(model, input_data)
          # Print the predicted class
-               predicted_class = np.argmax(prediction)
-               result = "likely to be approved" if prediction >= 0.5 else "not likely to be approved"
-               st.write(f"Prediction: {prediction[0]}")
-               st.write(f"Prediction: The client is {result}.")
+               #predicted_class = np.argmax(prediction)
+               # result = "likely to be approved" if prediction >= 0.5 else "not likely to be approved"
+               # st.write(f"Prediction: {prediction[0]}")
+               # st.write(f"Prediction: The client is {result}.")
 
         # Print the predicted class
                predicted_class = np.argmax(prediction)
