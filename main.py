@@ -23,7 +23,10 @@ columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibi
 
 def main():
     # Sample input fields corresponding to the columns in your training data
-    st.title("Loan Approval Prediction")
+    
+
+    st.title("Loan Approval Prediction App")
+    st.subheader("Enter the following details to predict loan approval:")
 
     # Create a DataFrame from the input variables
     input_df = pd.DataFrame(columns=columns)
