@@ -38,8 +38,8 @@ def main():
 
         # Print the predicted class
         predicted_class = np.argmax(prediction)
-        if predicted_class >= 0.5:
-            st.write("Prediction: Approved (Class 1)")
+        if predicted_class == 0:
+            st.write("Prediction: Rejected (Class 1)")
         else:
             st.write("Prediction: Rejected (Class 0)")
 
