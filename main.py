@@ -16,8 +16,12 @@ scaler = joblib.load('second_last_scaler.pkl')
 columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
 # Add more column names as needed to match your training data
 def main():
+
+    
+# Set page configuration and title
+st.set_page_config(page_title="Loan Approval Prediction", layout="wide")
     # Sample input fields corresponding to the columns in your training data
-    st.title("Loan Approval Prediction")
+    #st.title("Loan Approval Prediction")
 
     # Create a DataFrame from the input variables
     input_df = pd.DataFrame(columns=columns)
