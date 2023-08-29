@@ -19,7 +19,7 @@ Python installed on your local machine.
 pip package manager installed.
 
 # Installation
-- Clone this repository to your local machine using git clone https://github.com/yourusername/loan-approval-prediction.git
+- Clone this repository to your local machine using git clone https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING.git
 - Navigate to the project directory: cd loan-approval-prediction
 - Install the required packages using pip install -r requirements.txt
 
