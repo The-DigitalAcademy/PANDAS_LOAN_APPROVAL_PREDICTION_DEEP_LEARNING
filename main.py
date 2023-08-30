@@ -1,10 +1,3 @@
-
-import streamlit as st
-import tensorflow as tf
-import numpy as np
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
-import joblib
 import streamlit as st
 import tensorflow as tf
 import numpy as np
@@ -25,11 +18,12 @@ columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibi
 
 # Define a function to display the "Meet the Team" page
 def meet_the_team():
-    #st.title("Meet the Team")
+    st.title("Meet the Team")
     
     # Add team members with their pictures and descriptions
     team_members = [
-        {"name": "John Doe", "position": "Data Scientist", "image": "manoko.jpeg", "description": "John is a data scientist with expertise in machine learning and data analysis."},
+        {"name": "John Doe", "position": "Data Scientist", "image": "john_doe.jpg", "description": "John is a data scientist with expertise in machine learning and data analysis."},
+        {"name": "Jane Smith", "position": "Web Developer", "image": "jane_smith.jpg", "description": "Jane is a web developer responsible for creating the Streamlit app."},
         # Add more team members as needed
     ]
     
@@ -45,11 +39,9 @@ st.title("Loan Approval Prediction")
 # Sidebar
 with st.sidebar:
     # Add an option in the sidebar to navigate to the "Meet the Team" page
-    page_selection = st.selectbox("Menu", 
+    page_selection = st.selectbox("Navigation", 
                                    ["Loan Approval Prediction", "Meet the Team"])
-    if page_selection == "Meet the Team":
-        meet_the_team()
-
+    
 # Main content
 if page_selection == "Loan Approval Prediction":
     # Create a DataFrame from the input variables
@@ -72,6 +64,5 @@ if page_selection == "Loan Approval Prediction":
         
         st.write(f"Prediction: {prediction[0]}")
         st.write(f"The client is {result}.")
-
-if __name__ == '__main__':
-    main()
+elif page_selection == "Meet the Team":
+    meet_the_team()
