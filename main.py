@@ -23,28 +23,32 @@ def meet_the_team():
     # Add team members with their pictures and descriptions
     team_members = [
         {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
-         {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
-        
+        {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
+        # Add more team members as needed
     ]
-
-    # Create a container to display team members horizontally
+    
+    # Create a container for the team members
     team_container = st.container()
+    
+    # Create a CSS class for horizontal layout
+    st.markdown(
+        """
+        <style>
+        .horizontal-layout {
+            display: flex;
+            flex-direction: row;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     
     for member in team_members:
         with team_container:
             st.image(member['image'], caption=member['name'], use_column_width=True)
-            st.write(f"## {member['name']}")
+            st.markdown(f"**{member['name']}**")
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
-    
-
-    
-    
-    # for member in team_members:
-    #     st.write(f"## {member['name']}")
-    #     st.image(member['image'], caption=member['name'], use_column_width=True)
-    #     st.write(f"**Position**: {member['position']}")
-    #     st.write(member['description'])
 
 # Set page configuration and title
 st.title("Loan Approval Prediction")
