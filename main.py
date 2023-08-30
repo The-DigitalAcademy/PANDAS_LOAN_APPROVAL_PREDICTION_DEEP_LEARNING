@@ -60,15 +60,11 @@ def project_overview():
 # Set page configuration and title
 st.title("Loan Approval Prediction")
 
-# First, display the "Overview" page
-if page_selectiob == "Project Overview":
-    project_overview()
-
 # Sidebar
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Meet the Team", "Loan Approval Prediction"])
+                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
@@ -94,3 +90,5 @@ if page_selection == "Loan Approval Prediction":
         st.write(f"The client is {result}.")
 elif page_selection == "Meet the Team":
     meet_the_team()
+elif page_selection == "Project Overview":
+    project_overview()
