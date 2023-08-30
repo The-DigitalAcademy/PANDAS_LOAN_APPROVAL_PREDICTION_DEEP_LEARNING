@@ -61,7 +61,7 @@ def project_overview():
 st.title("Loan Approval Prediction")
 
 # First, display the "Overview" page
-if st.button("Project Overview"):
+if page_selectiob == "Project Overview":
     project_overview()
 
 # Sidebar
