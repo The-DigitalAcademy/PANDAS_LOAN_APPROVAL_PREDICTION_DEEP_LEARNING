@@ -61,7 +61,7 @@ def project_overview():
     st.write("Please navigate to other pages for more details about the team and predictions.")
 
 # Set page configuration and title
-st.title("Loan Approval Prediction")
+    st.title("Loan Approval Prediction")
 
 # Sidebar
 with st.sidebar:
