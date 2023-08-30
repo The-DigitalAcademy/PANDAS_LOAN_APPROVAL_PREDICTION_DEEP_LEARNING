@@ -23,7 +23,7 @@ def meet_the_team():
     # Add team members with their pictures and descriptions
     team_members = [
         {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
-        # Add more team members as needed
+        
     ]
     
     for member in team_members:
@@ -40,7 +40,7 @@ with st.sidebar:
     # Add an option in the sidebar to navigate to the "Meet the Team" page
     page_selection = st.selectbox("Navigation", 
                                    ["Loan Approval Prediction", "Meet the Team"])
-    
+
 # Main content
 if page_selection == "Loan Approval Prediction":
     # Create a DataFrame from the input variables
