@@ -27,17 +27,16 @@ def meet_the_team():
         
     ]
 
-      # Create columns to align team members horizontally
-    col1, col2, col3 = st.columns(3)
+    # Create a container to display team members horizontally
+    team_container = st.container()
     
     for member in team_members:
-        with col1:
+        with team_container:
             st.image(member['image'], caption=member['name'], use_column_width=True)
-        with col2:
             st.write(f"## {member['name']}")
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
-        col3.write("")  # Empty column to create space
+    
 
     
     
