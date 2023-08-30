@@ -22,8 +22,7 @@ def meet_the_team():
     
     # Add team members with their pictures and descriptions
     team_members = [
-        {"name": "John Doe", "position": "Data Scientist", "image": "john_doe.jpg", "description": "John is a data scientist with expertise in machine learning and data analysis."},
-        {"name": "Jane Smith", "position": "Web Developer", "image": "jane_smith.jpg", "description": "Jane is a web developer responsible for creating the Streamlit app."},
+        {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
         # Add more team members as needed
     ]
     
