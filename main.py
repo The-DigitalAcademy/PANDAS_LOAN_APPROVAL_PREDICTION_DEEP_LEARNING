@@ -22,8 +22,8 @@ def meet_the_team():
     
     # Add team members with their pictures and descriptions
     team_members = [
-        {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
-        {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
+        {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "John is a data scientist with expertise in machine learning and data analysis."},
+        {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Jane is a web developer responsible for creating the Streamlit app."},
         # Add more team members as needed
     ]
     
@@ -50,14 +50,25 @@ def meet_the_team():
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
 
+# Define a function to display the "Overview" page
+def project_overview():
+    st.title("Project Overview")
+    st.write("This project is aimed at predicting loan approval using machine learning.")
+    st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
+    st.write("Please navigate to other pages for more details about the team and predictions.")
+
 # Set page configuration and title
 st.title("Loan Approval Prediction")
 
+# First, display the "Overview" page
+if st.button("Project Overview"):
+    project_overview()
+
 # Sidebar
 with st.sidebar:
-    # Add an option in the sidebar to navigate to the "Meet the Team" page
+    # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Loan Approval Prediction", "Meet the Team"])
+                                   ["Meet the Team", "Loan Approval Prediction"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
