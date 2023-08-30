@@ -26,12 +26,26 @@ def meet_the_team():
          {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
         
     ]
+
+      # Create columns to align team members horizontally
+    col1, col2, col3 = st.columns(3)
     
     for member in team_members:
-        st.write(f"## {member['name']}")
-        st.image(member['image'], caption=member['name'], use_column_width=True)
-        st.write(f"**Position**: {member['position']}")
-        st.write(member['description'])
+        with col1:
+            st.image(member['image'], caption=member['name'], use_column_width=True)
+        with col2:
+            st.write(f"## {member['name']}")
+            st.write(f"**Position**: {member['position']}")
+            st.write(member['description'])
+        col3.write("")  # Empty column to create space
+
+    
+    
+    # for member in team_members:
+    #     st.write(f"## {member['name']}")
+    #     st.image(member['image'], caption=member['name'], use_column_width=True)
+    #     st.write(f"**Position**: {member['position']}")
+    #     st.write(member['description'])
 
 # Set page configuration and title
 st.title("Loan Approval Prediction")
