@@ -52,6 +52,9 @@ def meet_the_team():
 
 # Define a function to display the "Overview" page
 def project_overview():
+    
+# Set page configuration and title
+    st.title("Loan Approval Prediction")
     st.title("Project Overview")
     
     st.write("This project is aimed at predicting loan approval using machine learning.")
@@ -61,7 +64,7 @@ def project_overview():
     st.write("Please navigate to other pages for more details about the team and predictions.")
 
 # Set page configuration and title
-    st.title("Loan Approval Prediction")
+    #st.title("Loan Approval Prediction")
 
 # Sidebar
 with st.sidebar:
