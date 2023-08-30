@@ -53,8 +53,13 @@ def meet_the_team():
 # Define a function to display the "Overview" page
 def project_overview():
     st.title("Project Overview")
-    st.write("This project is aimed at predicting loan approval using machine learning.")
+
+    
+    st.subheading("This project is aimed at predicting loan approval using machine learning.")
+
+    
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
+    
     st.write("Please navigate to other pages for more details about the team and predictions.")
 
 # Set page configuration and title
