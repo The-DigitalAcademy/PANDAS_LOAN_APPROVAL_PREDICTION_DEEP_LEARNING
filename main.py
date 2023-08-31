@@ -34,6 +34,7 @@ st.markdown(
         width: 150px; /* Set the desired width for the images */
         height: auto;
         margin-bottom: 10px;
+        border-radius: 50%; /* Add border radius for circular images */
     }
     </style>
     """,
@@ -52,15 +53,15 @@ def meet_the_team():
         {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
     ]
 
-    # Create columns for images and descriptions
-    columns = st.columns(len(team_members))
-    for i, member in enumerate(team_members):
-        with columns[i]:
-            st.markdown(f'<div class="team-member"><img src="{member["image"]}" alt="{member["name"]}"><strong>{member["name"]}</strong><br>{member["position"]}<br>{member["description"]}</div>', unsafe_allow_html=True)
+    # Display team members in a row
+    for member in team_members:
+        st.markdown(
+            f'<div class="team-member"><img src="{member["image"]}" alt="{member["name"]}" /><strong>{member["name"]}</strong><br>{member["position"]}<br>{member["description"]}</div>',
+            unsafe_allow_html=True
+        )
 
 # Define a function to display the "Overview" page
 def project_overview():
-    
     st.title("Project Overview")
     
     st.header("Predicting clients whose loans are most likely to be approved")
@@ -70,12 +71,8 @@ def project_overview():
     st.write("This project is aimed at predicting loan approval using deep learning.")
     
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
-
     
     st.write("Please navigate to other pages for more details about the team and predictions.")
-
-# Set page configuration and title
-#st.title("Loan Approval Prediction")
 
 # Sidebar
 with st.sidebar:
