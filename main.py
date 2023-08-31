@@ -24,9 +24,11 @@ def meet_the_team():
     team_members = [
         {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
         {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
+        {"name": "Manoko Langa", "position": "Data Scientist", "image": " WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."}
         # Add more team members as needed
     ]
-    
+
+    WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg
     # Create a container for the team members
     team_container = st.container()
     
