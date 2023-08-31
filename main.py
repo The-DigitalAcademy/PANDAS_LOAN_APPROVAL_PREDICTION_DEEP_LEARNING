@@ -73,7 +73,7 @@ def project_overview():
     
     st.title("Project Overview")
     
-    st.header("Predicting clients whose loans are most likely to be approved")
+    st.subheader("Predicting clients whose loans are most likely to be approved.")
     
     st.image('business.jpeg')
     
