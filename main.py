@@ -54,9 +54,9 @@ def meet_the_team():
     # Add team members with their pictures and descriptions
     team_members = [
         {"name": "Sibongile Mokoena", "position": "Junior Data Scientist", "image": "sbosha.jpeg", "description": "Sibongile is a data scientist with expertise in machine learning and data analysis."},
-        {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
+        {"name": "Manoko Langa", "position": "Web Developer", "image": "manoko.jpeg", "description": "Manoko is a web developer responsible for creating the Streamlit app."},
         {"name": "Zandile Mdiniso", "position": "Data Scientist", "image": "zand.jpeg", "description": "Similar to Manoko, Zandile is a data scientist with expertise in data analysis and machine learning."},
-        {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
+        {"name": "Thando Vilakazi", "position": "Business Analyst", "image": "thando.jpeg", "description": "Thando is a business analyst responsible for the valuable insights extracted in this project."},
     ]
 
     # Create columns for images and descriptions
@@ -132,5 +132,5 @@ elif page_selection == "Contact Us":
             text = st.text_area(label='Email Text', placeholder='Please enter your text here')
             uploaded_file = st.file_uploader("Attachment")
             submit_res = st.form_submit_button("Send")
-        st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan default web "
+        st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan approval web "
                     "application and look forward to connecting with you soon")
