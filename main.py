@@ -24,6 +24,17 @@ st.markdown(
         background-image: url('background.jpeg'); /* Replace 'background.jpeg' with your image file path */
         background-size: cover;
     }
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .team-member img {
+        width: 150px; /* Set the desired width for the images */
+        height: auto;
+        margin-bottom: 10px;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -45,10 +56,7 @@ def meet_the_team():
     columns = st.columns(len(team_members))
     for i, member in enumerate(team_members):
         with columns[i]:
-            st.image(member['image'], caption=member['name'], use_column_width=True)
-            st.markdown(f"**{member['name']}**")
-            st.write(f"**Position**: {member['position']}")
-            st.write(member['description'])
+            st.markdown(f'<div class="team-member"><img src="{member["image"]}" alt="{member["name"]}"><strong>{member["name"]}</strong><br>{member["position"]}<br>{member["description"]}</div>', unsafe_allow_html=True)
 
 # Define a function to display the "Overview" page
 def project_overview():
