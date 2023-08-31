@@ -54,7 +54,8 @@ def meet_the_team():
 def project_overview():
     st.title("Project Overview")
     # Display an image from the same directory as your script
-    st.image("loan-icon.jpeg")
+    st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')
+    #st.image(" st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')")
     st.write("This project is aimed at predicting loan approval using machine learning.")
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
     st.write("Please navigate to other pages for more details about the team and predictions.")
