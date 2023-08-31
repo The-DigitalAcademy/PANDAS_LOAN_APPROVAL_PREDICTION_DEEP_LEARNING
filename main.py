@@ -35,7 +35,20 @@ def meet_the_team():
     #WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg
     # Create a container for the team members
     team_container = st.container()
-    
+
+     
+# Add a CSS style to set the background image
+   st.markdown(
+    """
+    <style>
+    body {
+        background-image: url('background.jpeg'); /* Replace 'background.jpg' with your image file path */
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
     # Create a CSS class for horizontal layout
     st.markdown(
         """
