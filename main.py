@@ -55,7 +55,8 @@ def project_overview():
     
 # Set page configuration and title
     st.title("Loan Approval Prediction")
-    st.image('loan-icon-3.jpeg')
+    #st.image('loan-icon-3.jpeg')
+    st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')
     st.title("Project Overview")
     
     st.write("This project is aimed at predicting loan approval using machine learning.")
