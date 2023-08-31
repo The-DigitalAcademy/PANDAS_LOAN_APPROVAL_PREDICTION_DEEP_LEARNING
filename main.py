@@ -16,6 +16,12 @@ scaler = joblib.load('second_last_scaler.pkl')
 columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
 # Add more column names as needed to match your training data
 
+# Resize all images to a consistent size
+def resize_image(image_path, size=(150, 150)):
+    image = Image.open(image_path)
+    image = image.resize(size)
+    return image
+
 # Add a CSS style to set the background image for the entire application
 st.markdown(
     """
@@ -32,7 +38,7 @@ st.markdown(
     }
     .team-member img {
         width: 150px; /* Set the desired width for the images */
-        height: auto;
+        height: 150px;
         margin-bottom: 10px;
         border-radius: 50%;
     }
@@ -57,7 +63,7 @@ def meet_the_team():
     columns = st.columns(len(team_members))
     for i, member in enumerate(team_members):
         with columns[i]:
-            st.image(member['image'], caption=member['name'], use_column_width=True)
+            st.image(resize_image(member['image']), caption=member['name'], use_column_width=True)
             st.write(f"**{member['name']}**")
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
