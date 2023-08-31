@@ -54,7 +54,7 @@ def meet_the_team():
 def project_overview():
     
     st.title("Project Overview")
-    
+    st.header("predicting clients whose loans are most likely to be approved")
     # Display an image from the same directory as your script
     #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loan-icon-.png')
     # st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
