@@ -64,7 +64,7 @@ def meet_the_team():
     for i, member in enumerate(team_members):
         with columns[i]:
             st.image(resize_image(member['image']), caption=member['name'], use_column_width=True)
-            st.write(f"**{member['name']}**")
+            #st.write(f"**{member['name']}**")
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
 
