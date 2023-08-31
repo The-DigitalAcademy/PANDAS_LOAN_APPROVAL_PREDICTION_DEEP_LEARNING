@@ -28,7 +28,7 @@ def meet_the_team():
         # Add more team members as needed
     ]
 
-    WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg
+    #WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg
     # Create a container for the team members
     team_container = st.container()
     
