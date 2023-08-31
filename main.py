@@ -52,18 +52,13 @@ def meet_the_team():
         {"name": "Zandile Mdiniso", "position": "Data Scientist", "image": "zand.jpeg", "description": "Similar to Manoko, Zandile is a data scientist with expertise in data analysis and machine learning."},
         {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
     ]
-    # Display team members in a row
-    for member in team_members:
-        st.markdown(
-            f'<div class="team-member"><img src="{member["image"]}" alt="{member["name"]}" /><strong>{member["name"]}</strong><br>{member["position"]}<br>{member["description"]}</div>',
-            unsafe_allow_html=True
-        )
+
     # Create columns for images and descriptions
     columns = st.columns(len(team_members))
     for i, member in enumerate(team_members):
         with columns[i]:
             st.image(member['image'], caption=member['name'], use_column_width=True)
-            st.markdown(f"**{member['name']}**")
+            st.write(f"**{member['name']}**")
             st.write(f"**Position**: {member['position']}")
             st.write(member['description'])
 
@@ -82,9 +77,6 @@ def project_overview():
 
     
     st.write("Please navigate to other pages for more details about the team and predictions.")
-
-# Set page configuration and title
-#st.title("Loan Approval Prediction")
 
 # Sidebar
 with st.sidebar:
