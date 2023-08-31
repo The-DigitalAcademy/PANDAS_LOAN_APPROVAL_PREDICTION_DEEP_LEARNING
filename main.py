@@ -6,7 +6,6 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from PIL import Image
 
-
 # Load your trained model (replace with the path to your model file)
 model = tf.keras.models.load_model('final4.h5')
 
@@ -32,23 +31,22 @@ def meet_the_team():
         # Add more team members as needed
     ]
 
-    #WhatsApp Image 2023-08-31 at 3.31.11 PM.jpeg
     # Create a container for the team members
     team_container = st.container()
 
-     
-# Add a CSS style to set the background image
-   st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('background.jpeg'); /* Replace 'background.jpg' with your image file path */
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
+    # Add a CSS style to set the background image
+    st.markdown(
+        """
+        <style>
+        body {
+            background-image: url('background.jpeg'); /* Replace 'background.jpg' with your image file path */
+            background-size: cover;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
     )
+
     # Create a CSS class for horizontal layout
     st.markdown(
         """
@@ -61,7 +59,7 @@ def meet_the_team():
         """,
         unsafe_allow_html=True,
     )
-    
+
     for member in team_members:
         with team_container:
             st.image(member['image'], caption=member['name'], use_column_width=True)
@@ -142,4 +140,3 @@ elif page_selection == "Contact Us":
             submit_res = st.form_submit_button("Send")
         st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan default web "
                     "application and look forward to connecting with you soon")
-       
