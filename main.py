@@ -77,9 +77,11 @@ def project_overview():
     
     st.image('business.jpeg')
     
-    st.write("This project is aimed at predicting loan approval using deep learning.")
+    st.write("This project is aimed at predicting whether a loan application will be approved or not using deep learning.")
     
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
+
+    st.write("The model is trained on historical loan application data to make predictions based on various features such as annual income, loan amount, credit score, and more.")
 
     
     st.write("Please navigate to other pages for more details about the team and predictions.")
