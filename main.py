@@ -16,6 +16,19 @@ scaler = joblib.load('second_last_scaler.pkl')
 columns = ['no_of_dependents', 'income_annum', 'loan_amount', 'loan_term', 'cibil_score']
 # Add more column names as needed to match your training data
 
+# Add a CSS style to set the background image for the entire application
+st.markdown(
+    """
+    <style>
+    body {
+        background-image: url('background.jpeg'); /* Replace 'background.jpeg' with your image file path */
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Define a function to display the "Meet the Team" page
 def meet_the_team():
     st.title("Meet the Team")
@@ -33,19 +46,6 @@ def meet_the_team():
 
     # Create a container for the team members
     team_container = st.container()
-
-    # Add a CSS style to set the background image
-    st.markdown(
-        """
-        <style>
-        body {
-            background-image: url('background.jpeg'); /* Replace 'background.jpg' with your image file path */
-            background-size: cover;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 
     # Create a CSS class for horizontal layout
     st.markdown(
