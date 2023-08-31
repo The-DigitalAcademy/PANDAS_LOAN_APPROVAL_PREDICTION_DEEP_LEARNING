@@ -6,6 +6,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 from PIL import Image
 
+
 # Load your trained model (replace with the path to your model file)
 model = tf.keras.models.load_model('final4.h5')
 
