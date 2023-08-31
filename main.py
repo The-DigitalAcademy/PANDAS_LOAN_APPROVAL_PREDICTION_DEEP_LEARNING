@@ -95,6 +95,8 @@ with st.sidebar:
 # Main content
 if page_selection == "Loan Approval Prediction":
     
+    st.title("Loan Approval Prediction App")
+    
     # Create a DataFrame from the input variables
     input_df = pd.DataFrame(columns=columns)
     input_df.loc[0] = [0] * len(columns)  # Initialize with zeros, you can replace these with your desired default values
