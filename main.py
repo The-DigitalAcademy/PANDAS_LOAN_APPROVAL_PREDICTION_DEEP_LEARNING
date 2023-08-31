@@ -52,7 +52,9 @@ def meet_the_team():
 
 # Define a function to display the "Overview" page
 def project_overview():
+    
     st.title("Project Overview")
+    
     # Display an image from the same directory as your script
     #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loan-icon-.png')
     # st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
