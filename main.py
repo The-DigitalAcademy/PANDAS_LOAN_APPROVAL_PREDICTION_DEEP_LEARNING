@@ -36,32 +36,15 @@ def meet_the_team():
     # Add team members with their pictures and descriptions
     team_members = [
         {"name": "Sibongile Mokoena", "position": "Junior Data Scientist", "image": "sbosha.jpeg", "description": "Sibongile is a data scientist with expertise in machine learning and data analysis."},
-        # Add more team members as needed
         {"name": "Manoko Langa", "position": "Data Scientist", "image": "manoko.jpeg", "description": "Manoko is a data scientist with expertise in machine learning and data analysis."},
         {"name": "Zandile Mdiniso", "position": "Data Scientist", "image": "zand.jpeg", "description": "Similar to Manoko, Zandile is a data scientist with expertise in data analysis and machine learning."},
         {"name": "Thando Vilakazi", "position": "Web Developer", "image": "thando.jpeg", "description": "Thando is a web developer responsible for creating the Streamlit app."},
-        #{"name": "Sibongile Mokoena", "position": "Junior Data Scientist", "image": "sbosha.jpeg", "description": "Sibongile is a data scientist with expertise in machine learning and data analysis."}
-        # Add more team members as needed
     ]
 
-    # Create a container for the team members
-    team_container = st.container()
-
-    # Create a CSS class for horizontal layout
-    st.markdown(
-        """
-        <style>
-        .horizontal-layout {
-            display: flex;
-            flex-direction: row;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    for member in team_members:
-        with team_container:
+    # Create columns for images and descriptions
+    columns = st.columns(len(team_members))
+    for i, member in enumerate(team_members):
+        with columns[i]:
             st.image(member['image'], caption=member['name'], use_column_width=True)
             st.markdown(f"**{member['name']}**")
             st.write(f"**Position**: {member['position']}")
@@ -73,12 +56,8 @@ def project_overview():
     st.title("Project Overview")
     
     st.header("Predicting clients whose loans are most likely to be approved")
-    # Display an image from the same directory as your script
-    #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loan-icon-.png')
-    #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
     
     st.image('business.jpeg')
-    #st.image(" st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')")
     
     st.write("This project is aimed at predicting loan approval using deep learning.")
     
