@@ -80,7 +80,7 @@ def project_overview():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team"])
+                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
@@ -109,3 +109,21 @@ elif page_selection == "Meet the Team":
     meet_the_team()
 elif page_selection == "Project Overview":
     project_overview()
+elif page_selection == "Contact Us":
+        st.title('Contact Us!')
+        st.markdown("Have a question or want to get in touch with us? Please fill out the form below with your email "
+                    "address, and we'll get back to you as soon as possible. We value your privacy and assure you "
+                    "that your information will be kept confidential.")
+        st.markdown("By submitting this form, you consent to receiving email communications from us regarding your "
+                    "inquiry. We may use the email address you provide to respond to your message and provide any "
+                    "necessary assistance or information.")
+        with st.form("Email Form"):
+            subject = st.text_input(label='Subject', placeholder='Please enter subject of your email')
+            fullname = st.text_input(label='Full Name', placeholder='Please enter your full name')
+            email = st.text_input(label='Email Address', placeholder='Please enter your email address')
+            text = st.text_area(label='Email Text', placeholder='Please enter your text here')
+            uploaded_file = st.file_uploader("Attachment")
+            submit_res = st.form_submit_button("Send")
+        st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan default web "
+                    "application and look forward to connecting with you soon")
+       
