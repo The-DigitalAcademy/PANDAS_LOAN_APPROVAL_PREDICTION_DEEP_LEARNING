@@ -27,7 +27,7 @@ st.markdown(
     """
     <style>
     body {
-        background-image: url('background.jpeg'); /* Replace 'background.jpeg' with your image file path */
+        background-image: url('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/business.jpeg'); /* Replace 'background.jpeg' with your image file path */
         background-size: cover;
     }
     .team-member {
