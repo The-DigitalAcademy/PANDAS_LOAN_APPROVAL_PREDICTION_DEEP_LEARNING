@@ -55,7 +55,7 @@ def project_overview():
     
     st.title("Project Overview")
     
-    st.header("predicting clients whose loans are most likely to be approved")
+    st.header("Predicting clients whose loans are most likely to be approved")
     # Display an image from the same directory as your script
     #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loan-icon-.png')
     # st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
@@ -63,7 +63,6 @@ def project_overview():
     #st.image(" st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')")
     
     st.write("This project is aimed at predicting loan approval using deep learning.")
-    
     
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
 
