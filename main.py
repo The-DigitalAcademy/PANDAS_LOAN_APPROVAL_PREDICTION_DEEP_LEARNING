@@ -62,7 +62,7 @@ def project_overview():
     st.header("Predicting clients whose loans are most likely to be approved")
     # Display an image from the same directory as your script
     #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loan-icon-.png')
-    st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
+    #st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
     st.image('business.jpeg')
     #st.image(" st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')")
     
