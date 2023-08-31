@@ -60,7 +60,8 @@ def project_overview():
     # st.image('https://github.com/The-DigitalAcademy/PANDAS_LOAN_APPROVAL_PREDICTION_DEEP_LEARNING/blob/main/loanimage.jpeg')
     #st.image('/Users/da_m1_23/Downloads/Manoko-loan-default-prediction/loanimage.jpeg')
     #st.image(" st.image('/Users/da_m1_23/Downloads/deep_learning/loan-icon.jpeg')")
-    st.write("This project is aimed at predicting loan approval using machine learning.")
+    
+    st.write("This project is aimed at predicting loan approval using deep learning.")
     
     
     st.write("It uses a deep learning model to predict whether a loan application is likely to be approved or not.")
