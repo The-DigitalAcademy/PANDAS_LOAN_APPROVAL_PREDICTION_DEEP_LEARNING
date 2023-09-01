@@ -90,23 +90,14 @@ def project_overview():
 def data_analysis():
     st.title("Data Analysis")
     st.subheader("Exploratory Data Analysis (EDA)")
-    st.subheader("Findings:")
     
     # Load your EDA visuals
-    st.write("1.Most clients had their loans approved.")
-    image1 = Image.open('loan-status-distribution.jpeg')
-    st.write("2.Clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
-    st.write("3.Most clients had a poor credit score status, and the least number of clients had an excellent credit score status.")
-    image2 = Image.open('loan-amount.jpeg')
+    image1 = Image.open('visual1.png')
+    image2 = Image.open('visual2.png')
     
-    image3 = Image.open('average-credit-score.jpeg')
-    image4 = Image.open('average-annual-income.jpeg')
-    #image4 = Image.open('loan-status-distribution.jpeg')
+    st.image(image1, caption='Visualization 1', use_column_width=True)
+    st.image(image2, caption='Visualization 2', use_column_width=True)
     
-    st.image(image1, caption='Credit Score versus Loan Amount', use_column_width=True)
-    st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
-    st.image(image3, caption='Credit Status vs Average Annual Income', use_column_width=True)
-    st.image(image4, caption='Credit Status vs Average Annual Income', use_column_width=True)
     st.write("Here are some exploratory data analysis (EDA) visuals from your dataset.")
     st.write("You can add more visuals and descriptions as needed.")
 
@@ -114,7 +105,7 @@ def data_analysis():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Data Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
+                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team", "Data Analysis", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
@@ -163,4 +154,4 @@ elif page_selection == "Contact Us":
             uploaded_file = st.file_uploader("Attachment")
             submit_res = st.form_submit_button("Send")
         st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan approval web "
-                    "application and look forward to connecting with you soon")"
+                    "application and look forward to connecting with you soon")
