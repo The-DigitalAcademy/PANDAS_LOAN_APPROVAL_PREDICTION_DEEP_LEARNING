@@ -92,10 +92,11 @@ def data_analysis():
     st.subheader("Exploratory Data Analysis (EDA)")
     
     # Load your EDA visuals
-    image1 = Image.open('loan-amount.jpeg')
-    image2 = Image.open('average-credit-score.jpeg')
-    image3 = Image.open('average-annual-income.jpeg')
-    image4 = Image.open('loan-status-distribution.jpeg')
+    image1 = Image.open('loan-status-distribution.jpeg')
+    image2 = Image.open('loan-amount.jpeg')
+    image3 = Image.open('average-credit-score.jpeg')
+    image4 = Image.open('average-annual-income.jpeg')
+    #image4 = Image.open('loan-status-distribution.jpeg')
     
     st.image(image1, caption='Credit Score versus Loan Amount', use_column_width=True)
     st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
