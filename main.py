@@ -90,11 +90,13 @@ def project_overview():
 def data_analysis():
     st.title("Data Analysis")
     st.subheader("Exploratory Data Analysis (EDA)")
+    st.subheader("Findings:")
     
     # Load your EDA visuals
-    st.write("most clients had their loans approved.")
+    st.write("1.Most clients had their loans approved.")
     image1 = Image.open('loan-status-distribution.jpeg')
-    st.write("clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
+    st.write("2.Clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
+    st.write("3.Most clients had a poor credit score status, and the least number of clients had an excellent credit score status.")
     image2 = Image.open('loan-amount.jpeg')
     
     image3 = Image.open('average-credit-score.jpeg')
@@ -112,7 +114,7 @@ def data_analysis():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team", "Data Analysis", "Contact Us"])
+                                   ["Project Overview", "Data Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
