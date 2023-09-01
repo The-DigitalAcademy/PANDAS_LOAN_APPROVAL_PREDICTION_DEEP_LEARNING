@@ -57,6 +57,8 @@ def meet_the_team():
         {"name": "Manoko Langa", "position": "Web Developer", "image": "manoko.jpeg", "description": "Manoko is a web developer responsible for creating the Streamlit app."},
         {"name": "Zandile Mdiniso", "position": "Data Scientist", "image": "zand.jpeg", "description": "Similar to Manoko, Zandile is a data scientist with expertise in data analysis and machine learning."},
         {"name": "Thando Vilakazi", "position": "Business Analyst", "image": "thando.jpeg", "description": "Thando is a business analyst responsible for the valuable insights extracted in this project."},
+        {"name": "Zweli Junior Khumalo", "position": "Business Analyst", "image": "zweli.jpeg", "description": "Zweli is a business analyst responsible for the valuable insights extracted in this project."},
+    
     ]
 
     # Create columns for images and descriptions
