@@ -107,7 +107,7 @@ def data_analysis():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Exploratory Data Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
+                                   ["Project Overview", "Data Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
@@ -150,4 +150,4 @@ elif page_selection == "Contact Us":
                     "necessary assistance or information.")
         with st.form("Email Form"):
             subject = st.text_input(label='Subject', placeholder='Please enter subject of your email')
-            #fullname = st.text_input(label='Full Name', placeholder='
+            fullname = st.text_input(label='Full Name', placeholder='
