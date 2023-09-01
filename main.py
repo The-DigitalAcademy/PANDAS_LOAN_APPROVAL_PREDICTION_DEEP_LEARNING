@@ -92,12 +92,10 @@ def data_analysis():
     st.subheader("Exploratory Data Analysis (EDA)")
     
     # Load your EDA visuals
-    image1 = Image.open('loan-amount.jpeg')
-    image2 = Image.open('average-credit-score.jpeg')
-    image3 = Image.open('average-annual-income.jpeg')
+    image1 = Image.open('visual1.png')
+    image2 = Image.open('visual2.png')
     
     st.image(image1, caption='Visualization 1', use_column_width=True)
-    st.image(image2, caption='Visualization 2', use_column_width=True)
     st.image(image2, caption='Visualization 2', use_column_width=True)
     
     st.write("Here are some exploratory data analysis (EDA) visuals from your dataset.")
@@ -107,7 +105,7 @@ def data_analysis():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Data Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
+                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team", "Data Analysis", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
@@ -150,4 +148,10 @@ elif page_selection == "Contact Us":
                     "necessary assistance or information.")
         with st.form("Email Form"):
             subject = st.text_input(label='Subject', placeholder='Please enter subject of your email')
-            fullname = st.text_input(label='Full Name', placeholder='
+            fullname = st.text_input(label='Full Name', placeholder='Please enter your full name')
+            email = st.text_input(label='Email Address', placeholder='Please enter your email address')
+            text = st.text_area(label='Email Text', placeholder='Please enter your text here')
+            uploaded_file = st.file_uploader("Attachment")
+            submit_res = st.form_submit_button("Send")
+        st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan approval web "
+                    "application and look forward to connecting with you soon")
