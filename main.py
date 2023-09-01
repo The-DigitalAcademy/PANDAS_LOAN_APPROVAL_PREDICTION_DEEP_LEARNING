@@ -143,6 +143,7 @@ if page_selection == "Loan Approval Prediction":
         
         # Format the result
         result = f"likely to be approved with a probability of {positive_percentage:.2f}%"
+
         
         st.write(f"Prediction: {result}")
 elif page_selection == "Meet the Team":
