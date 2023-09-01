@@ -90,7 +90,7 @@ def project_overview():
 with st.sidebar:
     # Add options in the sidebar to navigate to different pages
     page_selection = st.selectbox("Navigation", 
-                                   ["Project Overview", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
+                                   ["Project Overview", "Analysis", "Loan Approval Prediction", "Meet the Team", "Contact Us"])
 
 # Main content
 if page_selection == "Loan Approval Prediction":
