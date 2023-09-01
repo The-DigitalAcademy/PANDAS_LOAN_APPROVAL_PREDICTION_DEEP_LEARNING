@@ -107,7 +107,7 @@ def data_analysis():
     st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
     st.image(image3, caption='Credit Status vs Average Annual Income', use_column_width=True)
     st.image(image4, caption='Credit Status vs Average Annual Income', use_column_width=True)
-    st.write("Here are some exploratory data analysis (EDA) visuals from y
+    #st.write("Here are some exploratory data analysis (EDA) visuals from y
     
     
 
