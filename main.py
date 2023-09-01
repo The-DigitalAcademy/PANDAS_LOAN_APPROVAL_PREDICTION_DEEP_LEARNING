@@ -90,16 +90,26 @@ def project_overview():
 def data_analysis():
     st.title("Data Analysis")
     st.subheader("Exploratory Data Analysis (EDA)")
+    st.subheader("Findings:")
     
     # Load your EDA visuals
-    image1 = Image.open('visual1.png')
-    image2 = Image.open('visual2.png')
+    st.write("1.Most clients had their loans approved.")
+    image1 = Image.open('loan-status-distribution.jpeg')
+    st.write("2.Clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
+    st.write("3.Most clients had a poor credit score status, and the least number of clients had an excellent credit score status.")
+    image2 = Image.open('loan-amount.jpeg')
     
-    st.image(image1, caption='Visualization 1', use_column_width=True)
-    st.image(image2, caption='Visualization 2', use_column_width=True)
+    image3 = Image.open('average-credit-score.jpeg')
+    image4 = Image.open('average-annual-income.jpeg')
+    #image4 = Image.open('loan-status-distribution.jpeg')
     
-    st.write("Here are some exploratory data analysis (EDA) visuals from your dataset.")
-    st.write("You can add more visuals and descriptions as needed.")
+    st.image(image1, caption='Credit Score versus Loan Amount', use_column_width=True)
+    st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
+    st.image(image3, caption='Credit Status vs Average Annual Income', use_column_width=True)
+    st.image(image4, caption='Credit Status vs Average Annual Income', use_column_width=True)
+    st.write("Here are some exploratory data analysis (EDA) visuals from y
+    
+    
 
 # Sidebar
 with st.sidebar:
