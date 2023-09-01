@@ -150,4 +150,4 @@ elif page_selection == "Contact Us":
                     "necessary assistance or information.")
         with st.form("Email Form"):
             subject = st.text_input(label='Subject', placeholder='Please enter subject of your email')
-            fullname = st.text_input(label='Full Name', placeholder='
+            #fullname = st.text_input(label='Full Name', placeholder='
