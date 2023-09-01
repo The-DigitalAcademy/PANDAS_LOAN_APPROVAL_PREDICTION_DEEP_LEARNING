@@ -92,11 +92,13 @@ def data_analysis():
     st.subheader("Exploratory Data Analysis (EDA)")
     
     # Load your EDA visuals
-    image1 = Image.open('visual1.png')
-    image2 = Image.open('visual2.png')
+    image1 = Image.open('loan-amount.jpeg')
+    image2 = Image.open('average-credit-score.jpeg')
+    image3 = Image.open('average-annual-income.jpeg')
     
-    st.image(image1, caption='Visualization 1', use_column_width=True)
-    st.image(image2, caption='Visualization 2', use_column_width=True)
+    st.image(image1, caption='Credit Score versus Loan Amount', use_column_width=True)
+    st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
+    st.image(image2, caption='Credit Status vs Average Annual Income', use_column_width=True)
     
     st.write("Here are some exploratory data analysis (EDA) visuals from your dataset.")
     st.write("You can add more visuals and descriptions as needed.")
