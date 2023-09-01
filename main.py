@@ -142,7 +142,8 @@ if page_selection == "Loan Approval Prediction":
         positive_percentage = prediction[0] * 100
         
         # Format the result
-        result = f"likely to be approved with a probability of {positive_percentage:.2f}%"
+       result = f"likely to be approved with a probability of {positive_percentage*100:.2f}%"
+
 
         
         st.write(f"Prediction: {result}")
