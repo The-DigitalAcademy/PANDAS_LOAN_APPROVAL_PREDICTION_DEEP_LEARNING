@@ -93,10 +93,10 @@ def data_analysis():
     st.subheader("Findings:")
     
     # Load your EDA visuals
-    st.write("1. Most clients had their loans approved.")
+    st.write("1.Most clients had their loans approved.")
     image1 = Image.open('loan-status-distribution.jpeg')
-    st.write("2. Clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
-    st.write("3. Most clients had a poor credit score status, and the least number of clients had an excellent credit score status.")
+    st.write("2.Clients with an 'excellent' and 'good' credit score status tend to take the lowest average loan amounts.")
+    st.write("3.Most clients had a poor credit score status, and the least number of clients had an excellent credit score status.")
     image2 = Image.open('loan-amount.jpeg')
     
     image3 = Image.open('average-credit-score.jpeg')
@@ -137,16 +137,10 @@ if page_selection == "Loan Approval Prediction":
         
         # Use the loaded model to make predictions
         prediction = model.predict(input_data)
+        result = "likely to be approved" if prediction >= 0.5 else "not likely to be approved"
         
-        # Convert the prediction to a positive percentage
-        positive_percentage = prediction[0] * 100
-        
-        # Format the result
-       result = f"likely to be approved with a probability of {positive_percentage*100:.2f}%"
-
-
-        
-        st.write(f"Prediction: {result}")
+        st.write(f"Prediction: {prediction[0]}")
+        st.write(f"The client is {result}.")
 elif page_selection == "Meet the Team":
     meet_the_team()
 elif page_selection == "Project Overview":
@@ -169,4 +163,4 @@ elif page_selection == "Contact Us":
             uploaded_file = st.file_uploader("Attachment")
             submit_res = st.form_submit_button("Send")
         st.markdown("Thank you for reaching out to us. We appreciate your interest in our loan approval web "
-                    "application and look forward to connecting with you soon")
+                    "application and look forward to connecting with you soon")"
