@@ -95,11 +95,12 @@ def data_analysis():
     image1 = Image.open('loan-amount.jpeg')
     image2 = Image.open('average-credit-score.jpeg')
     image3 = Image.open('average-annual-income.jpeg')
+    image4 = Image.open('loan-status-distribution.jpeg')
     
     st.image(image1, caption='Credit Score versus Loan Amount', use_column_width=True)
     st.image(image2, caption='Average Credit Score and Credit Score Status', use_column_width=True)
-    st.image(image2, caption='Credit Status vs Average Annual Income', use_column_width=True)
-    
+    st.image(image3, caption='Credit Status vs Average Annual Income', use_column_width=True)
+    st.image(image4, caption='Credit Status vs Average Annual Income', use_column_width=True)
     st.write("Here are some exploratory data analysis (EDA) visuals from your dataset.")
     st.write("You can add more visuals and descriptions as needed.")
 
